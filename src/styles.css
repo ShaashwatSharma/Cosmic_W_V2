@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/pexels-alexandrep-junior-7736062.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.glow {
+    clip-path: ellipse(20% 40% at 50% 50%);
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    
+    width: 80px;
+    height: 190px;
+    rotate: -80deg;
+}
+
+.circle-contain {
+    position:fixed;
+    margin: 0 auto;
+}
+
+.glow-circle {
+    /* position: absolute; */
+    border-radius: 50%;
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 99.5% );
+
+    width: 480px;
+    height: 480px;
+    /* scale: 1.2; */
+}
+
+.ring {
+    height: 300px;
+    width: 900px;
+    position: relative;
+    outline: 11px solid rgba(136,80,226,1);
+    
+    border-radius: 50%;
+    left: -220px;
+    top: 80px;
+    rotate: 15deg;
+  }
+
+.semicircle {
+    position: absolute;
+  width: 480px;
+  height: 240px;
+  background-image: linear-gradient(91.2deg, rgba(136,80,226,1) 4%, rgba(16,13,91,1) 99.5%);
+  border-radius: 400px 400px 0 0;
+  z-index: 1;
+}
+
+.hero {
+    box-shadow: 0px 0px 15px 0px rgba( 31, 38, 135, 0.37 );
+}
+
+/* .article {
+    background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0.5px );
+-webkit-backdrop-filter: blur( 0.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+} */
+
+.article h1 {
+    font-family: 'Bebas Neue';
+}
+
+.art-img {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% );
+}
+
+
+.art-section-bottom {
+    box-shadow: inset 0px -250px 99px -43px rgba(0, 0, 0, 0.941);
+}
+
+
+.sec-g-contain {
+    position: fixed;
+    margin: 0 auto;
+    z-index: -1;
+    top: -200px;
+}
+
+.sec-glow {
+    height: 400px;
+    width: 700px;
+    border-radius: 50%;
+    position: relative;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% );
+}
+
+.member-name {
+    font-family: 'Lexend';
+    font-weight: 500;
+}
+
+.member-desc {
+    font-family: 'Host Grotesk';
+    font-weight: 500;
+}
+
+.foot-glow {
+    border-radius: 50%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(24,22,39,1) 0%, rgba(151,41,247,1) 90% );
+    rotate: 25deg;
+}
+

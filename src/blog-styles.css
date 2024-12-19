@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+
+.nav-bar {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.glow {
+    clip-path: ellipse(20% 40% at 50% 50%);
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    
+    width: 80px;
+    height: 190px;
+    rotate: -80deg;
+}
+
+.hero {
+    backdrop-filter: blur(90px) saturate(150%);
+    background-color: rgba(17, 25, 40, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.hero-cont {
+    font-family: 'Hanken Grotesk';
+}
+
+#menu {
+    font-family: 'Hanken Grotesk';
+}
+
+.blog-card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(29, 17, 40, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.foot-glow {
+    border-radius: 50%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(24,22,39,1) 0%, rgba(151,41,247,1) 90% );
+    rotate: 25deg;
+}

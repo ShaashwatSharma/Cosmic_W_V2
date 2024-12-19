@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gyroscope-Controlled Sky Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      color: white;
+    }
+    #debug {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      font-size: 14px;
+    }
+    svg {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="debug">Alpha: 0, Beta: 0, Gamma: 0</div>
+
+  <script>
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const stars = d3.range(500).map(() => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+    }));
+
+    const starElements = svg.selectAll("circle")
+      .data(stars)
+      .enter()
+      .append("circle")
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y)
+      .attr("r", 2)
+      .attr("fill", "white");
+
+    const debugDiv = document.getElementById("debug");
+
+    // Handle Device Orientation
+    function handleOrientation(event) {
+      const { alpha, beta, gamma } = event;
+
+      // Debug display
+      debugDiv.textContent = `Alpha: ${alpha?.toFixed(1) || 0}, Beta: ${beta?.toFixed(1) || 0}, Gamma: ${gamma?.toFixed(1) || 0}`;
+
+      // Map motion data to changes in star positions
+      const xOffset = (gamma / 90) * width / 2; // Horizontal motion based on gamma
+      const yOffset = (beta / 90) * height / 2; // Vertical motion based on beta
+
+      starElements
+        .attr("cx", d => d.x - xOffset)
+        .attr("cy", d => d.y - yOffset);
+    }
+
+    // Request permissions and add orientation listeners
+    async function requestOrientationPermission() {
+      if (typeof DeviceOrientationEvent?.requestPermission === 'function') {
+        try {
+          const permissionResponse = await DeviceOrientationEvent.requestPermission();
+          if (permissionResponse === 'granted') {
+            window.addEventListener("deviceorientation", handleOrientation);
+          } else {
+            alert("Device Orientation permission denied.");
+          }
+        } catch (error) {
+          console.error("Permission request failed: ", error);
+        }
+      } else {
+        window.addEventListener("deviceorientation", handleOrientation);
+      }
+    }
+
+    requestOrientationPermission();
+  </script>
+</body>
+</html>
