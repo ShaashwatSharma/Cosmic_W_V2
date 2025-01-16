@@ -1,0 +1,79 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-no-repeat bg-cover bg-center bg-fixed h-screen;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("images/pexels-alexandrep-junior-7736062.jpg");
+}
+.glow {
+  @apply w-20 h-[190px];
+  clip-path: ellipse(20% 40% at 50% 50%);
+  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  rotate: -80deg;
+}
+.circle-contain {
+  @apply fixed mx-auto my-0;
+}
+.glow-circle {
+  @apply bg-[linear-gradient(_91.2deg,rgba(136,80,226,1)_4%,rgba(16,13,91,1)_99.5%_)] w-[480px] h-[480px] rounded-[50%];
+
+  /* position: absolute; */
+  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+
+  /* scale: 1.2; */
+}
+.ring {
+  @apply h-[300px] w-[900px] relative left-[-220px] rounded-[50%] top-20;
+  outline: 11px solid rgba(136, 80, 226, 1);
+  rotate: 15deg;
+}
+.semicircle {
+  @apply absolute w-[480px] h-60 bg-[linear-gradient(91.2deg,rgba(136,80,226,1)_4%,rgba(16,13,91,1)_99.5%)] z-[1] rounded-[400px_400px_0_0];
+}
+.hero {
+  @apply shadow-[0px_0px_15px_0px_rgba(_31,38,135,0.37_)];
+}
+
+/* .article {
+    background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0.5px );
+-webkit-backdrop-filter: blur( 0.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+} */
+.article h1 {
+  font-family: "Bebas Neue";
+}
+.art-img {
+  @apply bg-[radial-gradient(_circle_farthest-corner_at_10%_20%,rgba(151,41,247,1)_0%,rgba(24,22,39,1)_90%_)];
+}
+.art-section-bottom {
+  @apply shadow-[inset_0px_-250px_99px_-43px_rgba(0,0,0,0.941)];
+}
+.sec-g-contain {
+  @apply fixed z-[-1] top-[-200px] mx-auto my-0;
+}
+.sec-glow {
+  @apply h-[400px] w-[700px] relative bg-[radial-gradient(_circle_farthest-corner_at_10%_20%,rgba(151,41,247,1)_0%,rgba(24,22,39,1)_90%_)] rounded-[50%];
+}
+.member-name {
+  @apply font-medium;
+  font-family: "Lexend";
+}
+.member-desc {
+  @apply font-medium;
+  font-family: "Host Grotesk";
+}
+.foot-glow {
+  @apply bg-[radial-gradient(_circle_farthest-corner_at_10%_20%,rgba(24,22,39,1)_0%,rgba(151,41,247,1)_90%_)] rounded-[50%];
+  rotate: 25deg;
+}
