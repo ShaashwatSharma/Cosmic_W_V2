@@ -1,4 +1,4 @@
-export const signup=()=> {
+export const Signup=()=> {
     return (
         <>
   <meta charSet="UTF-8" />

@@ -1,4 +1,4 @@
-export const article=()=> {
+export const Article=()=> {
     return (
         <>
   <meta charSet="UTF-8" />

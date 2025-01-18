@@ -1,4 +1,4 @@
-export const blog=()=> {
+export const Blog=()=> {
     return (
         <>
   <meta charSet="UTF-8" />
