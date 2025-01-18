@@ -344,7 +344,7 @@ export const Index=()=>{
           <div className="team-container flex flex-wrap w-full h-full justify-center items-center p-5">
             {/* Member 1 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('/images/members/abhijeet.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/abhijeet.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Abhijeet Srivastava</p>
                 <p className="member-desc text-[#720e9e]">Software Engineer</p>
@@ -352,7 +352,7 @@ export const Index=()=>{
             </div>
             {/* Member 2 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('/images/members/shaashwat.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/shaashwat.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Shaashwat Sharma</p>
                 <p className="member-desc text-[#720e9e]">MERN Engineer</p>
@@ -360,7 +360,7 @@ export const Index=()=>{
             </div>
             {/* Member 3 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('/images/members/abhishek-tripathi.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/abhishek-tripathi.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Abhishek Tripathi</p>
                 <p className="member-desc text-[#720e9e]">Backend Developer</p>
@@ -368,7 +368,7 @@ export const Index=()=>{
             </div>
             {/* Member 4 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('images/members/Shivanash.jpg')] bg-cover grayscale " />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/anonamus.jpg')] bg-cover grayscale " />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Shivansh Rastogi</p>
                 <p className="member-desc text-[#720e9e]">Software Engineer</p>
@@ -376,7 +376,7 @@ export const Index=()=>{
             </div>
             {/* Member 5 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('/images/members/kuldeep-gaud.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/kuldeep-gaud.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Kuldeep Gaud</p>
                 <p className="member-desc text-[#720e9e]">React Developer</p>
@@ -384,7 +384,7 @@ export const Index=()=>{
             </div>
             {/* Member 6 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('/images/members/sudhanshu.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/sudhanshu.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Sudhanshu Singh</p>
                 <p className="member-desc text-[#720e9e]">Full Stack Developer</p>
@@ -392,7 +392,7 @@ export const Index=()=>{
             </div>
             {/* Member 7 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('images/members/aditya-pfp.jpg')] bg-cover grayscale" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/anonamus.jpg')] bg-cover grayscale" />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Aditya Pratap Singh</p>
                 <p className="member-desc text-[#720e9e]">IIT-BHU</p>
@@ -400,7 +400,7 @@ export const Index=()=>{
             </div>
             {/* Member 8 */}
             <div className="member flex  w-[295px] h-fit p-3 justify-start items-center rounded-lg backdrop-blur-xl mx-3 mb-5 /15 hover:bg-white/5 ease-in duration-200">
-              <div className="pfp flex rounded-full h-16 w-16 bg-[url('images/members/imageuserppp.png')] bg-cover grayscale invert" />
+              <div className="pfp flex rounded-full h-16 w-16 bg-[url('src/assets/members/anonamus.jpg')] bg-cover filter grayscale-[50%] " />
               <div className="mem-info flex flex-col m-3 items-start">
                 <p className="member-name text-lg text-white">Anonymous</p>
                 <p className="member-desc text-[#720e9e]">Software Engineer</p>
@@ -478,7 +478,7 @@ export const Index=()=>{
                     <a
                       href="#"
                       className="text-gray-400 hover:text-gray-600"
-                      onClick="location.href='night-sky.html'"
+                    //   onClick="location.href='night-sky.html'"
                     >
                       Night Sky Map
                     </a>
