@@ -1,20 +1,19 @@
 {
   "name": "backend",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsc -b && node dist/index.js"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@types/express": "^5.0.0",
-    "esbuild": "^0.24.2",
-    "express": "^4.21.2",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@prisma/client": "^6.2.1",
+    "@prisma/extension-accelerate": "^1.2.1",
+    "cors": "^2.8.5",
+    "hono": "^4.6.17",
+    "prisma": "^6.2.1",
+    "react-router-dom": "^7.1.3"
   },
-  "description": ""
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "wrangler": "^3.101.0"
+  }
 }
