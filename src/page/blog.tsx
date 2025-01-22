@@ -3,8 +3,8 @@ import Footer from "../components/footer";
 
 import '../App.css';
 
-import BlogHero from "../components/bloghero";
-import BlogNav from "../components/blognav";
+import BlogHero from "../components/blogComponents/bloghero";
+import BlogNav from "../components/blogComponents/blognav";
 import BlogCard from "../components/blogComponents/blogcard";
 
 
