@@ -8,11 +8,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  @apply bg-no-repeat bg-cover bg-center bg-fixed h-screen;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url("images/pexels-alexandrep-junior-7736062.jpg");
-} */
+
+/* Important - Changes made in this file are not being reflected instead use App.css */
+
 .glow {
   @apply w-20 h-[190px];
   clip-path: ellipse(20% 40% at 50% 50%);
@@ -24,11 +22,6 @@
 }
 .glow-circle {
   @apply bg-[linear-gradient(_91.2deg,rgba(136,80,226,1)_4%,rgba(16,13,91,1)_99.5%_)] w-[480px] h-[480px] rounded-[50%];
-
-  /* position: absolute; */
-  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
-
-  /* scale: 1.2; */
 }
 .ring {
   @apply h-[300px] w-[900px] relative left-[-220px] rounded-[50%] top-20;
@@ -36,7 +29,7 @@
   rotate: 15deg;
 }
 .semicircle {
-  @apply absolute w-[480px] h-60 bg-[linear-gradient(91.2deg,rgba(136,80,226,1)_4%,rgba(16,13,91,1)_99.5%)] z-[1] rounded-[400px_400px_0_0];
+  @apply absolute w-[480px] h-[240px] bg-[linear-gradient(91.2deg,rgba(136,80,226,1)_4%,rgba(16,13,91,1)_99.5%)] z-[1] rounded-[400px_400px_0_0];
 }
 .hero {
   @apply shadow-[0px_0px_15px_0px_rgba(_31,38,135,0.37_)];
