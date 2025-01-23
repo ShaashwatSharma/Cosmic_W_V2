@@ -6,7 +6,7 @@ import ProfileAvatar from './profile';
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isAuthenticated, setIsAuthenticated] = useState(true); // Tracks user authentication
+    const [isAuthenticated, setIsAuthenticated] = useState(false); // Tracks user authentication
 
     const toggleMenu = (event: React.MouseEvent) => {
         event.stopPropagation();
