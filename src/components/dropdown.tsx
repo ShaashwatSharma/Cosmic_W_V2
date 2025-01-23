@@ -8,7 +8,7 @@ const DropDown: React.FC = () => {
     // Get Full Name of User
     const fullName = "Abhijeet Srivastava";
     const userEmail = "abhijeet.afk@gmail.com";
-    const [isAuthenticated, setIsAuthenticated] = useState(true); 
+    const [isAuthenticated, setIsAuthenticated] = useState(false); 
 
     const navigate = useNavigate();
     return (
