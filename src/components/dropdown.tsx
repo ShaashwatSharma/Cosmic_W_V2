@@ -15,7 +15,7 @@ const DropDown: React.FC = () => {
         <>
             <div
                     id="menu"
-                    className="absolute right-8 mt-[-30px] w-fit bg-white rounded-lg shadow-lg dark:bg-gray-800 z-50 font-light overflow-hidden"
+                    className="absolute right-8 mt-[-30px] w-fit min-w-48  bg-white rounded-lg shadow-lg dark:bg-gray-800 z-50 font-light overflow-hidden"
                 >
                     <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Home</Link>
                     <Link to="/blogs" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Blogs</Link>
