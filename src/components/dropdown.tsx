@@ -35,7 +35,7 @@ const DropDown: React.FC = () => {
                     ) : (
                         <>
                             <Link to="/signup" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign Up</Link>
-                            <Link to="/login" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Login</Link>  
+                            <Link to="/signin" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Login</Link>  
                         </>
                     )}
                 </div>

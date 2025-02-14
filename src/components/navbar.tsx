@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                 ) : (
                     <button
                         type="button"
-                        onClick={() => (window.location.href = '/login')}
+                        onClick={() => (window.location.href = '/signin')}
                         className="hidden md:block text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-sm rounded-full text-sm px-5 py-1 text-center hover:scale-105 transition-all duration-300 font-[Montserrat]"
                     >
                         Sign In

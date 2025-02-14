@@ -5,6 +5,8 @@ import { Signup } from './page/signup'
 import { Signin } from './page/signin'
 import { Blog } from './page/blog'
 import { Article } from './page/article'
+import { Profile } from './page/profile'
+import { Submit } from './page/submit'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path='/signin' element={<Signin/>}/>
           <Route path='/article/:id' element={<Article/>}/>
           <Route path='/blog' element={<Blog/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/submit' element={<Submit/>}/>
         </Routes>
       </BrowserRouter>
     </>

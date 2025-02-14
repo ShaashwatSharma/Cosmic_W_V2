@@ -1,28 +1,58 @@
+import axios from "axios";
+import { ChangeEvent,useState } from "react"
+import { useNavigate } from "react-router-dom";
+import {DATABASE_URL} from "../Tsconfig"
+
 export const Signup=()=> {
+  const navigate=useNavigate();
+  const [password2,setpassword2]=useState("")
+
+      const [userSignup, setUserSignup] = useState({
+        name: "user7",
+        email: "user7@gmail.com",
+        password: "abcd@1234",
+        username: "user7",
+        bio: "alpha beta omega sigma skibbidy ohio fanum tax"
+      });
+
+  async function sendRequest(){
+
+    try{
+        // if (userSignup.password1 !== password2) {
+        //   alert('Warning: Passwords are not the same!');
+        //   return;
+        // }      
+        console.log({msg:"before axios call"},userSignup)
+        console.log("26")
+        const response=await axios.post(`${DATABASE_URL}/api/v1/user/signup`,userSignup);
+        console.log("27")
+        const token=response.data.jwt;
+        console.log("29")
+        localStorage.setItem("token",`Bearer ${token}`)
+        console.log("31")
+        console.log({msg:"after axios call"},userSignup,{Token: "token"})
+        console.log("33")
+        navigate("/profile");
+        // alert('stop')
+    }catch(e){
+        // alert the user that the request failed
+        console.log("Hi from four")
+        console.log(e)
+        alert('Warning: Something went wrong please try again ');
+    }
+}
+
+
     return (
         <>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign-Up Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
-  <style
-    dangerouslySetInnerHTML={{
-      __html:
-        "\n        .glass {\n            background: rgba(255, 255, 255, 0.1);\n            backdrop-filter: blur(10px);\n            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n            border: 1px solid rgba(255, 255, 255, 0.2);\n        }\n    "
-    }}
-  />
+        <div className="bg-gradient-to-br from-slate-950/85 to-slate-950 flex items-center justify-center min-h-screen">
   <div className="w-full max-w-[450px] m-4 glass text-white rounded-lg p-8  font-[Montserrat] text-sm">
     <div className="welcome flex flex-col items-start" />
     <h2 className="text-3xl font-bold mb-4">Create Your Account</h2>
     <p className="text-gray-300 mb-6">
       Already have an account?
       <a
-        href="login.html"
+        href="/signin"
         className="text-purple-400 hover:underline hover:text-purple-500 transition-all duration-200"
       >
         Sign in
@@ -39,6 +69,12 @@ export const Signup=()=> {
           id="full-name"
           placeholder="John Doe"
           className="w-full px-4 py-2 bg-gray-800/50 text-white rounded-md ring-1 ring-gray-700 focus:ring-purple-500"
+          onChange={(e) => {
+            setUserSignup({
+              ...userSignup,
+              name: e.target.value,
+            });
+          }}
         />
       </div>
       <div className="mb-4">
@@ -50,6 +86,12 @@ export const Signup=()=> {
           id="email"
           placeholder="name@company.com"
           className="w-full px-4 py-2 bg-gray-800/50 text-white rounded-md ring-1 ring-gray-700 focus:ring-purple-500"
+          onChange={(e) => {
+            setUserSignup({
+              ...userSignup,
+              email: e.target.value,
+            });
+          }}
         />
       </div>
       <div className="mb-4">
@@ -60,7 +102,14 @@ export const Signup=()=> {
           type="password"
           id="password"
           placeholder="••••••••••"
+          autoComplete="on"
           className="w-full px-4 py-2 bg-gray-800/50 text-white rounded-md ring-1 ring-gray-700 focus:ring-purple-500"
+          onChange={(e) => {
+            setUserSignup({
+              ...userSignup,
+              password: e.target.value,
+            });
+          }}
         />
       </div>
       <div className="mb-4">
@@ -74,11 +123,16 @@ export const Signup=()=> {
           type="password"
           id="confirm-password"
           placeholder="••••••••••"
+          autoComplete="on"
           className="w-full px-4 py-2 bg-gray-800/50 text-white rounded-md ring-1 ring-gray-700 focus:ring-purple-500"
+          onChange={(e) => {
+            setpassword2(e.target.value);
+          }}
         />
       </div>
       <button
-        type="submit"
+        type="button"
+        onClick={sendRequest}
         className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-medium py-2 rounded-md transition"
       >
         Sign Up
@@ -114,7 +168,7 @@ export const Signup=()=> {
       </button>
     </div>
   </div>
+  </div>
 </>
-
     )
 }
