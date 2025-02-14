@@ -7,7 +7,7 @@ const ArtBanner: React.FC = () => {
         <>
             {/* Articles Section Starts */}
         <div className="art-section flex flex-col w-full h-fit font-[Montserrat] backdrop-blur-md my-12 p-5 bg-gradient-to-br from-black to-gray-900">
-          <div className="art-section-bottom absolute left-0 top-0 w-full h-full" />
+          <div className="art-section-bottom absolute left-0 top-0 w-full h-full"></div>
           {/* Button */}
           <button
             type="button"
@@ -24,14 +24,14 @@ const ArtBanner: React.FC = () => {
                 Stay Updated: The Latest Space News, Astronomical Events, and
                 More...
               </h1>
-              <p className="text-lg text-zinc-400 text-gray-400 mb-10">
+              <p className="text-lg text-gray-400 mb-10">
                 Explore the wonders of the cosmos with our curated articles and
                 updates.
               </p>
             </div>
           </div>
           {/* Article Container  */}
-          <div className="art-container flex flex-wrap overflow-hidden">
+          <div className="art-container flex flex-wrap relative z-[-1] overflow-hidden">
             {/* Blog Card */}
             <div className="flex flex-col w-full md:w-1/3 px-4 mb-8">
               <div className="blog-card rounded-xl overflow-hidden shadow-lg bg-zinc-600/25">
