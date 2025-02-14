@@ -27,7 +27,7 @@ const BlogNav: React.FC = () => {
             </div>
             <div className="cont justify-between w-1/3 hidden md:flex">
                 <Link to="/" className="text-white font-[Montserrat] cursor-pointer hover:opacity-70">Home</Link>
-                <Link to="/blogs" className="text-white font-[Montserrat] cursor-pointer hover:opacity-70">Blogs</Link>
+                <Link to="/blog" className="text-white font-[Montserrat] cursor-pointer hover:opacity-70">Blogs</Link>
                 <div className="text-white font-[Montserrat] cursor-pointer hover:opacity-70">News</div>
                 <div className="text-white font-[Montserrat] cursor-pointer hover:opacity-70">About</div>
             </div>
@@ -50,7 +50,7 @@ const BlogNav: React.FC = () => {
         {isMenuOpen && (
             <div id="menu" className="absolute  right-8 mt-[-30px] w-48 bg-white rounded-lg shadow-lg dark:bg-gray-800 z-50 font-light overflow-hidden">
                 <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Home</Link>
-                <Link to="/blogs" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Blogs</Link>
+                <Link to="/blog" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Blogs</Link>
                 <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">News</div>
                 <div className="block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">About</div>
                 <div className="border-t border-gray-300 dark:border-gray-700 my-2"></div>
