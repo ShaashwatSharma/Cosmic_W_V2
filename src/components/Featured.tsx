@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-
+import bgImage from '../assets/images/a3.jpeg';
 
 const Featured: React.FC = () => {
     const navigate = useNavigate();
@@ -11,8 +11,8 @@ const Featured: React.FC = () => {
           <div className="w-[85%] flex flex-wrap justify-center items-center px-4 gap-8">
             {/* Image Section */}
             <div className="artbox relative">
-              <div className="art-img rounded-3xl overflow-hidden shadow-lg max-[1000px]:w-[80vw]">
-                <div className="feat-img w-[60vw] h-[60vw] max-w-[400px] max-h-[400px] object-cove" />
+              <div className="art-img rounded-3xl overflow-hidden shadow-lg max-[1000px]:w-[80vw] bg-cover"  style={{ backgroundImage: `url(${bgImage})` }}>
+                <div className="feat-img w-[60vw] h-[60vw] max-w-[400px] max-h-[400px] object-cover" />
               </div>
             </div>
             {/* Content Section */}
